@@ -30,6 +30,7 @@ see the old version in your browser.
 | `_ds/` | Design system: fonts, colours, spacing, base styles |
 | `uploads/` | Site images |
 | `logo.webp` | Header wordmark, transparent background |
+| `icon.webp` | River icon on its own, used in the footer |
 | `favicon.svg` | Browser tab icon |
 | `.nojekyll` | Required — see below |
 
