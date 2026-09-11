@@ -2,7 +2,7 @@
 
 Static marketing site for Yarra Biosystems. No build step, no server-side code.
 
-**Live:** https://savanh1.github.io/yarra-biosystems/
+**Live:** https://yarrabio.com/ (also at https://savanh1.github.io/yarra-biosystems/)
 
 ## Making updates
 
@@ -29,6 +29,7 @@ see the old version in your browser.
 | `image-slot.js` | Component behind the `<image-slot>` image areas |
 | `_ds/` | Design system: fonts, colours, spacing, base styles |
 | `uploads/` | Site images |
+| `logo.webp` | Header wordmark, transparent background |
 | `favicon.svg` | Browser tab icon |
 | `.nojekyll` | Required — see below |
 
@@ -57,4 +58,6 @@ see the old version in your browser.
 
 ## Custom domain
 
-Not set up yet — the site is on the `github.io` address above for now.
+`yarrabio.com` is configured in the repo's **Settings → Pages**. Because this repo
+deploys via GitHub Actions rather than from a branch, the domain lives in that
+setting and there is deliberately **no `CNAME` file** in the repo — don't add one.
