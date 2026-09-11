@@ -44,6 +44,7 @@
       <nav style="display: flex; gap: clamp(20px, 4vw, 40px); align-items: baseline;">
         <a href="#" onClick="{{ goHome }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Home<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
         <a href="#" onClick="{{ goPlatform }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Approach<sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="#" onClick="{{ goAbout }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">About<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
         <a href="#" onClick="{{ goContact }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Contact<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
       </nav>
     </div>
@@ -226,6 +227,40 @@
   </div>
   </sc-if>
 
+  <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">About</span>
+        <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 18ch;">Built where pathology meets engineering.</h1>
+        <div style="height: 2px; background: rgba(243,242,242,0.25); margin: clamp(32px, 6vh, 64px) 0 28px;"></div>
+        <p style="margin: 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: #d7d3d3; max-width: 66ch; text-wrap: pretty;">Yarra Biosystems is an early-stage company in Boulder, Colorado, building a functional oncology platform: an integrated instrument and software system spanning tumor biology, tissue mechanics, imaging, and AI-enabled software. The company holds intellectual property from three CU Boulder technologies.</p>
+      </div>
+    </section>
+
+    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(36px, 5vw, 80px); border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(36px, 6vh, 72px);">
+        <div data-reveal="1" style="flex: 1 1 360px; min-width: 0;">
+          <div class="grayscale" style="width: 100%; max-width: 340px; aspect-ratio: 4 / 5; position: relative;">
+            <image-slot id="yb-team-savanh" shape="rect" fit="cover" src="uploads/team-savanh-chantha-phavong.webp" placeholder="Portrait"></image-slot>
+          </div>
+          <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.16; letter-spacing: -0.02em; margin: 24px 0 0;">Savanh Chantha-Phavong, Ph.D.</h2>
+          <p style="margin: 10px 0 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-500);">Founder, CEO &amp; CSO</p>
+          <p style="margin: 18px 0 0; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.64; color: #d7d3d3; max-width: 48ch; text-wrap: pretty;">Fifteen years across tumor biology, translational pathology, histopathology, spatial biology, multiplexed imaging, digital pathology, and assay development, in academic, industry, and service laboratory settings. She leads scientific direction, marker and assay strategy, and customer discovery.</p>
+        </div>
+        <div data-reveal="1" style="flex: 1 1 360px; min-width: 0;">
+          <div class="grayscale" style="width: 100%; max-width: 340px; aspect-ratio: 4 / 5; position: relative;">
+            <image-slot id="yb-team-corey" shape="rect" fit="cover" src="uploads/team-corey-neu.webp" placeholder="Portrait"></image-slot>
+          </div>
+          <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.16; letter-spacing: -0.02em; margin: 24px 0 0;">Corey Neu, Ph.D.</h2>
+          <p style="margin: 10px 0 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-500);">Cofounder</p>
+          <p style="margin: 18px 0 0; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.64; color: #d7d3d3; max-width: 48ch; text-wrap: pretty;">Endowed professor of mechanical and biomedical engineering at CU Boulder, with expertise in tissue mechanics, imaging, and mechanobiology. He advises on mechanical perturbation workflows, tissue mechanics principles, and engineering feasibility.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
   <div class="yb-dark">
     <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
@@ -304,6 +339,7 @@
       <nav style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #d7d3d3;">
         <a href="#" onClick="{{ goHome }}">Home</a>
         <a href="#" onClick="{{ goPlatform }}">Approach</a>
+        <a href="#" onClick="{{ goAbout }}">About</a>
         <a href="#" onClick="{{ goContact }}">Contact</a>
       </nav>
     </div>
@@ -360,9 +396,11 @@ class Component extends DCLogic {
       isHome: page === "home",
       isPlatform: page === "platform",
       isContact: page === "contact",
+      isAbout: page === "about",
       goHome: this.go("home"),
       goPlatform: this.go("platform"),
       goContact: this.go("contact"),
+      goAbout: this.go("about"),
       showMomentum: this.props.showMomentum ?? false,
       showRoleSelector: this.props.showRoleSelector ?? false,
       sent: this.state.sent,

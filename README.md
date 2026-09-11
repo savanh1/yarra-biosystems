@@ -28,7 +28,7 @@ see the old version in your browser.
 | `support.js` | Rendering runtime that turns `index.html` into the live page |
 | `image-slot.js` | Component behind the `<image-slot>` image areas |
 | `_ds/` | Design system: fonts, colours, spacing, base styles |
-| `uploads/` | Site images |
+| `uploads/` | Site images, including team portraits |
 | `logo.webp` | Header wordmark, transparent background |
 | `icon.webp` | River icon on its own, used in the footer |
 | `favicon.svg` | Browser tab icon |
