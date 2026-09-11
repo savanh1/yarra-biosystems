@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarra Biosystems</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Yarra Biosystems is an early-stage life sciences technology company building a platform for understanding how tissues function and respond, beginning in oncology. Boulder, Colorado.">
+<meta property="og:title" content="Yarra Biosystems">
+<meta property="og:description" content="A platform for understanding how tissues function and respond. Beginning in oncology. Boulder, Colorado.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="_ds/modernist-7be90487-23bd-439d-95a9-67a45c253fb6/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<script src="_ds/modernist-7be90487-23bd-439d-95a9-67a45c253fb6/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #201e1d; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--color-accent-500); }
+  ::selection { background: var(--color-accent-300); color: #201e1d; }
+  .yb-dark .input, .yb-dark select.input, .yb-dark textarea.input {
+    background: transparent; border: 0; border-bottom: 2px solid rgba(243,242,242,0.3);
+    color: #f3f2f2; font-family: var(--font-body); font-size: 17px; padding: 10px 0; width: 100%; border-radius: 0;
+  }
+  .yb-dark .input:focus-visible { outline: none; border-bottom-color: var(--color-accent-500); }
+  .yb-dark .input::placeholder { color: #7d7979; }
+  :focus-visible { outline: 2px solid var(--color-accent-500); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<div style="font-family: var(--font-body); background: #201e1d; color: #f3f2f2; min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased;">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: #201e1d; border-bottom: 2px solid rgba(243,242,242,0.18);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <a href="#" onClick="{{ goHome }}" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase;">Yarra Biosystems</a>
+      <nav style="display: flex; gap: clamp(20px, 4vw, 40px); align-items: baseline;">
+        <a href="#" onClick="{{ goHome }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Home<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="#" onClick="{{ goPlatform }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Approach<sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="#" onClick="{{ goContact }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Contact<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1 1 auto;">
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <section style="padding: clamp(56px, 11vh, 140px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 96px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: clamp(32px, 6vh, 72px);">
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #bab6b6;">Boulder, Colorado</span>
+          <sc-if value="{{ showComingSoon }}" hint-placeholder-val="{{ true }}">
+            <span style="display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500); border: 2px solid var(--color-accent-500); padding: 5px 12px;"><span style="width: 7px; height: 7px; background: var(--color-accent-500); display: block;"></span>Site coming soon</span>
+          </sc-if>
+        </div>
+        <h1 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(40px, 8.2vw, 116px); line-height: 0.98; letter-spacing: -0.035em; margin: 0; max-width: 17ch; text-wrap: balance;">Understanding how tissues function and respond.</h1>
+        <div style="height: 2px; background: rgba(243,242,242,0.25); margin: clamp(36px, 7vh, 80px) 0 28px;"></div>
+        <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 72px);">
+          <p style="flex: 1 1 420px; min-width: 0; margin: 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: #d7d3d3; max-width: 62ch;">Yarra Biosystems is an early-stage life sciences technology company building a platform for spatial tissue analysis, beginning in oncology.</p>
+          <div style="flex: 0 1 280px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9b9797;">
+            <span>Early-stage · Pre-launch</span>
+            <span>Oncology first</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(48px, 9vh, 112px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <div data-reveal="1" style="width: 100%; height: clamp(240px, 52vh, 560px); position: relative;">
+          <image-slot id="yb-tissue" shape="rect" fit="cover" src="uploads/02_tissue_multiplex.png" placeholder="Drop an abstract tissue / imaging visual"></image-slot>
+        </div>
+        <p style="margin: 14px 0 0; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #7d7979;">Figure — multiplexed immunofluorescence, representative</p>
+      </div>
+    </section>
+
+    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(56px, 11vh, 140px) clamp(20px, 5vw, 64px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+        <div style="flex: 0 0 200px;">
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 600;">01 — Mission</span>
+        </div>
+        <div style="flex: 1 1 520px; min-width: 0;" data-reveal="1">
+          <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 28px; max-width: 20ch;">Biology read in place, not in isolation.</h2>
+          <p style="margin: 0 0 20px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; max-width: 64ch; text-wrap: pretty;">Tissue behaviour depends on context: which cells are present, where they sit, and how they relate to one another. Yarra Biosystems is building a platform that measures and interprets that context, beginning with oncology.</p>
+          <p style="margin: 0; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; max-width: 64ch; color: var(--color-neutral-800); text-wrap: pretty;">The company is based in Boulder, Colorado, and is developing the platform alongside academic and clinical collaborators.</p>
+        </div>
+      </div>
+      <div style="max-width: 1320px; margin: clamp(36px, 7vh, 80px) auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(20px, 3vw, 40px);">
+        <figure data-reveal="1" style="margin: 0;">
+          <div style="width: 100%; height: clamp(200px, 32vh, 340px); position: relative;">
+            <image-slot id="yb-histology" shape="rect" fit="cover" src="uploads/01_tissue_histology.png" placeholder="Drop a histology visual"></image-slot>
+          </div>
+          <figcaption style="margin-top: 12px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Tissue architecture in section</figcaption>
+        </figure>
+        <figure data-reveal="1" style="margin: 0;">
+          <div style="width: 100%; height: clamp(200px, 32vh, 340px); position: relative;">
+            <image-slot id="yb-cellular" shape="rect" fit="cover" src="uploads/03_cell_therapy.png" placeholder="Drop a cellular visual"></image-slot>
+          </div>
+          <figcaption style="margin-top: 12px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Cell-to-cell interaction, illustrative</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 140px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <div style="height: 2px; background: var(--color-text); margin-bottom: 36px;"></div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: clamp(28px, 5vh, 56px);">
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 600;">02 — Approach</span>
+          <a href="#" onClick="{{ goPlatform }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--color-accent);">Read the approach</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 2px; background: var(--color-neutral-300);">
+          <div data-reveal="1" style="background: #f3f2f2; padding: 28px 24px 32px 0;">
+            <span style="font-size: 12px; letter-spacing: 0.14em; color: var(--color-neutral-600);">01</span>
+            <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; margin: 12px 0 10px;">Spatial biology</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--color-neutral-800);">Measurement that keeps cellular observations in their tissue context.</p>
+          </div>
+          <div data-reveal="1" style="background: #f3f2f2; padding: 28px 24px 32px;">
+            <span style="font-size: 12px; letter-spacing: 0.14em; color: var(--color-neutral-600);">02</span>
+            <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; margin: 12px 0 10px;">Pathology</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--color-neutral-800);">Grounded in how tissue is prepared and read in practice today.</p>
+          </div>
+          <div data-reveal="1" style="background: #f3f2f2; padding: 28px 24px 32px;">
+            <span style="font-size: 12px; letter-spacing: 0.14em; color: var(--color-neutral-600);">03</span>
+            <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; margin: 12px 0 10px;">Imaging</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--color-neutral-800);">Advanced imaging and immunofluorescence to resolve signal across a section.</p>
+          </div>
+          <div data-reveal="1" style="background: #f3f2f2; padding: 28px 24px 32px;">
+            <span style="font-size: 12px; letter-spacing: 0.14em; color: var(--color-neutral-600);">04</span>
+            <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; margin: 12px 0 10px;">Intelligence layer</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--color-neutral-800);">A developing analysis layer for interpretation of what is measured.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <sc-if value="{{ showMomentum }}" hint-placeholder-val="{{ false }}">
+      <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 140px);">
+        <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+          <div style="flex: 0 0 200px;">
+            <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 600;">03 — Momentum</span>
+          </div>
+          <div style="flex: 1 1 520px; min-width: 0;">
+            <p style="margin: 0; font-size: clamp(19px, 2.2vw, 30px); line-height: 1.45; max-width: 40ch; letter-spacing: -0.015em;">The company has taken part in university venture and commercialization programs, broadened its academic and technical network, and is pursuing non-dilutive funding.</p>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <section style="background: var(--color-accent); color: #f3f2f2; padding: clamp(48px, 10vh, 120px) clamp(20px, 5vw, 64px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px;">
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(30px, 5.2vw, 72px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; max-width: 16ch;">Talking with investors, partners, and collaborators.</h2>
+        <a href="#" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #201e1d; color: #f3f2f2; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;">Get in touch</a>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Approach</span>
+        <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 18ch;">Four capabilities, one view of the tissue.</h1>
+        <div style="height: 2px; background: rgba(243,242,242,0.25); margin: clamp(32px, 6vh, 64px) 0 28px;"></div>
+        <p style="margin: 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: #d7d3d3; max-width: 66ch; text-wrap: pretty;">The platform brings together capabilities that are usually kept apart, so that measurement, established diagnostic practice, and analysis inform one another rather than sitting in separate workflows.</p>
+      </div>
+    </section>
+
+    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
+        <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 64px); padding: clamp(28px, 4vh, 44px) 0; border-top: 2px solid var(--color-text);">
+          <span style="flex: 0 0 90px; font-family: var(--font-heading); font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700);">01</span>
+          <h2 style="flex: 0 1 320px; font-family: var(--font-heading); font-weight: 700; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.12; letter-spacing: -0.02em; margin: 0;">Spatial biology</h2>
+          <p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.62; color: var(--color-neutral-800); max-width: 56ch; text-wrap: pretty;">Cells are measured where they sit. Retaining spatial position means the relationships between cell populations, structures, and their surroundings remain available for analysis instead of being averaged away.</p>
+        </div>
+        <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 64px); padding: clamp(28px, 4vh, 44px) 0; border-top: 2px solid var(--color-text);">
+          <span style="flex: 0 0 90px; font-family: var(--font-heading); font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700);">02</span>
+          <h2 style="flex: 0 1 320px; font-family: var(--font-heading); font-weight: 700; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.12; letter-spacing: -0.02em; margin: 0;">Pathology</h2>
+          <p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.62; color: var(--color-neutral-800); max-width: 56ch; text-wrap: pretty;">The work is anchored in how tissue is handled and read today. Staying close to established diagnostic practice keeps the platform interpretable to the people who already assess tissue.</p>
+        </div>
+        <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 64px); padding: clamp(28px, 4vh, 44px) 0; border-top: 2px solid var(--color-text);">
+          <span style="flex: 0 0 90px; font-family: var(--font-heading); font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700);">03</span>
+          <h2 style="flex: 0 1 320px; font-family: var(--font-heading); font-weight: 700; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.12; letter-spacing: -0.02em; margin: 0;">Imaging and immunofluorescence</h2>
+          <p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.62; color: var(--color-neutral-800); max-width: 56ch; text-wrap: pretty;">Advanced imaging and immunofluorescence resolve multiple signals across a section, giving the analysis layer a richer and more consistent record of the tissue to work from.</p>
+        </div>
+        <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 64px); padding: clamp(28px, 4vh, 44px) 0; border-top: 2px solid var(--color-text); border-bottom: 2px solid var(--color-text);">
+          <span style="flex: 0 0 90px; font-family: var(--font-heading); font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700);">04</span>
+          <h2 style="flex: 0 1 320px; font-family: var(--font-heading); font-weight: 700; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.12; letter-spacing: -0.02em; margin: 0;">Intelligence layer</h2>
+          <p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.62; color: var(--color-neutral-800); max-width: 56ch; text-wrap: pretty;">A developing analysis layer draws the measurements together into descriptions of tissue state that a scientist or clinician can reason about. It is under active development.</p>
+        </div>
+        <figure data-reveal="1" style="margin: clamp(36px, 7vh, 72px) 0 0;">
+          <div class="grayscale" style="width: 100%; height: clamp(220px, 44vh, 460px); position: relative;">
+            <image-slot id="yb-instrument" shape="rect" fit="cover" src="uploads/04_lab_instrumentation.png" placeholder="Drop a laboratory visual"></image-slot>
+          </div>
+          <figcaption style="margin-top: 12px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Instrumentation and analysis, representative laboratory setting</figcaption>
+        </figure>
+        <p style="margin: clamp(32px, 6vh, 64px) 0 0; font-size: 15px; line-height: 1.6; color: var(--color-neutral-700); max-width: 60ch;">These pages describe the platform at a high level. Component-level and mechanism-level detail is shared with partners under confidentiality.</p>
+      </div>
+    </section>
+
+    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px;">
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 0; max-width: 18ch;">For a fuller picture, start a conversation.</h2>
+        <a href="#" onClick="{{ goContact }}" style="flex: 0 0 auto; background: var(--color-accent); color: #fff; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: var(--color-accent-600);">Contact us</a>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+  <div class="yb-dark">
+    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
+      <div style="max-width: 1320px; margin: 0 auto;">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Contact</span>
+        <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 15ch;">Tell us who you are and what you are looking for.</h1>
+      </div>
+    </section>
+
+    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 96px); border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(32px, 6vh, 64px);">
+        <div style="flex: 0 1 300px;">
+          <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.65; color: #d7d3d3; text-wrap: pretty;">We read every message and respond directly. Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #9b9797;">
+            <span>Yarra Biosystems</span>
+            <span>Boulder, Colorado</span>
+          </div>
+        </div>
+        <div style="flex: 1 1 460px; min-width: 0;">
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div style="border: 2px solid var(--color-accent-500); padding: clamp(24px, 4vw, 40px);">
+              <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; margin: 0 0 12px;">Message received.</h2>
+              <p style="margin: 0 0 20px; font-size: 17px; line-height: 1.6; color: #d7d3d3;">Thank you — we will be in touch shortly.</p>
+              <button type="button" onClick="{{ reset }}" style="background: transparent; border: 2px solid rgba(243,242,242,0.4); color: #f3f2f2; font-family: var(--font-body); padding: 12px 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="border-color: var(--color-accent-500); color: var(--color-accent-500);">Send another</button>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ submit }}" style="display: grid; gap: 28px;">
+              <label style="display: grid; gap: 8px;">
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Name</span>
+                <input class="input" type="text" name="name" required="required" placeholder="Full name">
+              </label>
+              <label style="display: grid; gap: 8px;">
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Email</span>
+                <input class="input" type="email" name="email" required="required" placeholder="you@organisation.com">
+              </label>
+              <label style="display: grid; gap: 8px;">
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Organization <span style="text-transform: none; letter-spacing: 0;">(optional)</span></span>
+                <input class="input" type="text" name="organization" placeholder="Company, fund, or institution">
+              </label>
+              <sc-if value="{{ showRoleSelector }}" hint-placeholder-val="{{ false }}">
+                <label style="display: grid; gap: 8px;">
+                  <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">I am a…</span>
+                  <select class="input" name="role">
+                    <option value="investor">Investor</option>
+                    <option value="partner">Strategic or industry partner</option>
+                    <option value="collaborator">Academic or technical collaborator</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+              </sc-if>
+              <label style="display: grid; gap: 8px;">
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Message</span>
+                <textarea class="input" name="message" rows="5" required="required" placeholder="What would you like to discuss?" style="resize: vertical;"></textarea>
+              </label>
+              <button type="submit" style="justify-self: start; background: var(--color-accent); color: #fff; border: 0; font-family: var(--font-body); padding: 16px 30px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="background: var(--color-accent-600);">Send message</button>
+            </form>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  </main>
+
+  <footer style="border-top: 2px solid rgba(243,242,242,0.25); padding: clamp(36px, 6vh, 64px) clamp(20px, 5vw, 64px) clamp(28px, 5vh, 48px);">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;">
+      <div style="flex: 1 1 280px;">
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(20px, 3vw, 30px); letter-spacing: -0.02em;">Yarra Biosystems</div>
+        <div style="margin-top: 8px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #9b9797;">Boulder, Colorado</div>
+      </div>
+      <nav style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #d7d3d3;">
+        <a href="#" onClick="{{ goHome }}">Home</a>
+        <a href="#" onClick="{{ goPlatform }}">Approach</a>
+        <a href="#" onClick="{{ goContact }}">Contact</a>
+      </nav>
+    </div>
+    <div style="max-width: 1320px; margin: clamp(28px, 5vh, 48px) auto 0; font-size: 12px; color: #7d7979;">© 2026 Yarra Biosystems. All rights reserved.</div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showComingSoon&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showMomentum&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showRoleSelector&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact form&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { page: "home", sent: false };
+
+  go(page) {
+    return (e) => {
+      if (e) e.preventDefault();
+      this.setState({ page }, () => window.scrollTo({ top: 0, behavior: "auto" }));
+    };
+  }
+
+  observe() {
+    if (this.props.scrollReveal === false) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const root = this.dcRoot || document;
+    const nodes = Array.from(document.querySelectorAll("[data-reveal]")).filter(n => !n.__ybSeen);
+    if (this.io) this.io.disconnect();
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = "1";
+          en.target.style.transform = "none";
+          en.target.__ybSeen = true;
+          this.io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    nodes.forEach((n, i) => {
+      n.style.opacity = "0";
+      n.style.transform = "translateY(18px)";
+      n.style.transition = "opacity .7s cubic-bezier(.22,.61,.36,1) " + Math.min(i, 4) * 70 + "ms, transform .7s cubic-bezier(.22,.61,.36,1) " + Math.min(i, 4) * 70 + "ms";
+      this.io.observe(n);
+    });
+  }
+
+  componentDidMount() { setTimeout(() => this.observe(), 60); }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.page !== this.state.page) setTimeout(() => this.observe(), 60);
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  renderVals() {
+    const page = this.state.page;
+    return {
+      isHome: page === "home",
+      isPlatform: page === "platform",
+      isContact: page === "contact",
+      goHome: this.go("home"),
+      goPlatform: this.go("platform"),
+      goContact: this.go("contact"),
+      showComingSoon: this.props.showComingSoon ?? true,
+      showMomentum: this.props.showMomentum ?? false,
+      showRoleSelector: this.props.showRoleSelector ?? false,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

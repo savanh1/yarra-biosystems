@@ -1,0 +1,7 @@
+# Normalise text files to LF in the repository (they deploy to a Linux runner).
+* text=auto eol=lf
+
+# Never line-ending-convert these — they are binary.
+*.png binary
+*.webp binary
+.thumbnail binary
