@@ -29,8 +29,7 @@ see the old version in your browser.
 | `image-slot.js` | Component behind the `<image-slot>` image areas |
 | `_ds/` | Design system: fonts, colours, spacing, base styles |
 | `uploads/` | Site images, including team portraits |
-| `logo.webp` | Header wordmark, transparent background |
-| `icon.webp` | River icon on its own, used in the footer |
+| `logo.webp` | Brand wordmark, transparent background — used in the header and footer |
 | `favicon.svg` | Browser tab icon |
 | `.nojekyll` | Required — see below |
 
