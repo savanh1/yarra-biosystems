@@ -5,8 +5,8 @@
   --color-bg: #f3f2f2;
   --color-surface: #eae9e9;
   --color-text: #201e1d;
-  --color-accent: #1c7683;
-  --color-accent-2: #43a7b1;
+  --color-accent: #0f8177;
+  --color-accent-2: #4ecdc4;
   --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
 
   /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
@@ -21,25 +21,25 @@
   --color-neutral-800: #444141;
   --color-neutral-900: #2d2b2b;
 
-  --color-accent-100: #edf8f9;
-  --color-accent-200: #d0edf0;
-  --color-accent-300: #a5dce1;
-  --color-accent-400: #66c2ca;
-  --color-accent-500: #43a7b1;
-  --color-accent-600: #186570;
-  --color-accent-700: #14555f;
-  --color-accent-800: #0f414a;
-  --color-accent-900: #0a2f36;
+  --color-accent-100: #e9faf7;
+  --color-accent-200: #c6f2ea;
+  --color-accent-300: #98e8dc;
+  --color-accent-400: #6bdccc;
+  --color-accent-500: #4ecdc4;
+  --color-accent-600: #0b6a62;
+  --color-accent-700: #12968c;
+  --color-accent-800: #094f49;
+  --color-accent-900: #063632;
 
-  --color-accent-2-100: #edf8f9;
-  --color-accent-2-200: #d0edf0;
-  --color-accent-2-300: #a5dce1;
-  --color-accent-2-400: #66c2ca;
-  --color-accent-2-500: #43a7b1;
-  --color-accent-2-600: #186570;
-  --color-accent-2-700: #14555f;
-  --color-accent-2-800: #0f414a;
-  --color-accent-2-900: #0a2f36;
+  --color-accent-2-100: #e9faf7;
+  --color-accent-2-200: #c6f2ea;
+  --color-accent-2-300: #98e8dc;
+  --color-accent-2-400: #6bdccc;
+  --color-accent-2-500: #4ecdc4;
+  --color-accent-2-600: #0b6a62;
+  --color-accent-2-700: #12968c;
+  --color-accent-2-800: #094f49;
+  --color-accent-2-900: #063632;
 
   --font-heading: "Archivo", system-ui, sans-serif;
   --font-heading-weight: 800;
