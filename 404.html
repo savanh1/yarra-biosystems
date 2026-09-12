@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarra Biosystems</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>html,body{margin:0;background:#201e1d;color:#f3f2f2;font:14px/1.5 system-ui,sans-serif}
+a{color:#f3f2f2}.w{max-width:640px;margin:18vh auto;padding:0 24px}</style>
+<script>
+// GitHub Pages has no file for /news, /about and so on, so it serves this
+// page. Hand the requested path to index.html as a query string; the decoder
+// there puts it back in the address bar before the app reads it.
+(function () {
+  var l = window.location;
+  var keep = 0;                       // the site is served at the domain root
+  var path = l.pathname.slice(1).split('/').slice(keep).join('/');
+  l.replace(
+    l.protocol + '//' + l.host +
+    l.pathname.split('/').slice(0, 1 + keep).join('/') + '/?/' +
+    path.replace(/&/g, '~and~') +
+    (l.search ? '&' + l.search.slice(1) : '') +
+    l.hash
+  );
+}());
+</script>
+</head>
+<body>
+<div class="w">
+  <p>Redirecting&hellip;</p>
+  <p>If nothing happens, go to <a href="/">yarrabio.com</a>.</p>
+</div>
+</body>
+</html>

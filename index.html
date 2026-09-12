@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yarra Biosystems</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+// Restores the path handed over by 404.html, so the address bar shows
+// /news rather than /?/news before the app reads it.
+(function (l) {
+  if (l.search[1] === '/') {
+    var decoded = l.search.slice(1).split('&').map(function (s) {
+      return s.replace(/~and~/g, '&');
+    }).join('?');
+    window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+  }
+}(window.location));
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -40,13 +52,13 @@
 
   <header style="position: sticky; top: 0; z-index: 20; background: #201e1d; border-bottom: 2px solid rgba(243,242,242,0.18);">
     <div style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
-      <a href="#" onClick="{{ goHome }}" aria-label="Yarra Biosystems home" style="display: flex; flex-direction: column; align-items: flex-start; gap: 7px;"><img src="logo.webp" alt="Yarra Biosystems" width="620" height="116" style="display: block; width: clamp(268px, 45vw, 357px); height: auto;"><span style="font-family: var(--font-body); font-size: clamp(9px, 1.45vw, 11.5px); font-weight: 400; letter-spacing: 0.06em; line-height: 1.2; color: rgba(243,242,242,0.58); white-space: nowrap; margin-left: calc(clamp(268px, 45vw, 357px) * 0.2613);">The Right Treatment. Before The First Dose.</span></a>
+      <a href="/" onClick="{{ goHome }}" aria-label="Yarra Biosystems home" style="display: flex; flex-direction: column; align-items: flex-start; gap: 7px;"><img src="logo.webp" alt="Yarra Biosystems" width="620" height="116" style="display: block; width: clamp(268px, 45vw, 357px); height: auto;"><span style="font-family: var(--font-body); font-size: clamp(9px, 1.45vw, 11.5px); font-weight: 400; letter-spacing: 0.06em; line-height: 1.2; color: rgba(243,242,242,0.58); white-space: nowrap; margin-left: calc(clamp(268px, 45vw, 357px) * 0.2613);">The Right Treatment. Before The First Dose.</span></a>
       <nav style="display: flex; flex-wrap: wrap; min-width: 0; gap: 10px clamp(8px, 2.67vw, 40px); align-items: baseline;">
-        <a href="#" onClick="{{ goHome }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Home<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
-        <a href="#" onClick="{{ goPlatform }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Approach<sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
-        <a href="#" onClick="{{ goAbout }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">About<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
-        <a href="#" onClick="{{ goNews }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">News<sc-if value="{{ isNews }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
-        <a href="#" onClick="{{ goContact }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Contact<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="/" onClick="{{ goHome }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Home<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="/approach" onClick="{{ goPlatform }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Approach<sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="/about" onClick="{{ goAbout }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">About<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="/news" onClick="{{ goNews }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">News<sc-if value="{{ isNews }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
+        <a href="/contact" onClick="{{ goContact }}" style="font-size: clamp(10.5px, 3.33vw, 15px); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding-bottom: 4px; display: block;">Contact<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}"><span style="display: block; height: 2px; background: var(--color-accent-500); margin-top: 5px;"></span></sc-if></a>
       </nav>
     </div>
   </header>
@@ -110,7 +122,7 @@
         <div style="height: 2px; background: rgba(243,242,242,0.25); margin-bottom: 36px;"></div>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: clamp(28px, 5vh, 56px);">
           <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500); font-weight: 600;">02 — Approach</span>
-          <a href="#" onClick="{{ goPlatform }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--color-accent-500);">Read the approach</a>
+          <a href="/approach" onClick="{{ goPlatform }}" style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--color-accent-500);">Read the approach</a>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 2px; background: rgba(243,242,242,0.25);">
           <div data-reveal="1" style="background: #201e1d; padding: 28px 24px 32px 0;">
@@ -155,14 +167,14 @@
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Collaboration</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 20ch; text-wrap: balance;">Developed alongside academic and clinical collaborators.</h2>
         <p data-reveal="1" style="margin: clamp(28px, 4.5vh, 44px) 0 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: #d7d3d3; max-width: 66ch; text-wrap: pretty;">Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
-        <a href="#" onClick="{{ goContact }}" style="display: inline-block; margin-top: clamp(26px, 4vh, 40px); flex: 0 0 auto; background: var(--color-accent); color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Start a conversation</a>
+        <a href="/contact" onClick="{{ goContact }}" style="display: inline-block; margin-top: clamp(26px, 4vh, 40px); flex: 0 0 auto; background: var(--color-accent); color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Start a conversation</a>
       </div>
     </section>
 
     <section style="background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 58%), radial-gradient(55% 120% at 97% 36%, rgba(112,112,112,0.86) 0%, rgba(112,112,112,0.20) 46%, rgba(112,112,112,0) 72%), linear-gradient(118deg, #141414 0%, #282828 42%, #424242 78%, #545454 100%); color: #f3f2f2; padding: clamp(48px, 10vh, 120px) clamp(20px, 5vw, 64px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px;">
         <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(30px, 5.2vw, 72px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; max-width: 16ch;">Talking with investors, partners, and collaborators.</h2>
-        <a href="#" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #f3f2f2; color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;">Get in touch</a>
+        <a href="/contact" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #f3f2f2; color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;">Get in touch</a>
       </div>
     </section>
   </div>
@@ -228,7 +240,7 @@
     <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px;">
         <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 0; max-width: 18ch;">For a fuller picture, start a conversation.</h2>
-        <a href="#" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #201e1d; color: #f3f2f2; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #3a3636;">Contact us</a>
+        <a href="/contact" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #201e1d; color: #f3f2f2; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #3a3636;">Contact us</a>
       </div>
     </section>
   </div>
@@ -297,7 +309,7 @@
     <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(36px, 6vh, 72px);">
         <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 20ch; text-wrap: balance;">To hear about it first, get in touch.</h2>
-        <a href="#" onClick="{{ goContact }}" style="flex: 0 0 auto; background: var(--color-accent); color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Contact us</a>
+        <a href="/contact" onClick="{{ goContact }}" style="flex: 0 0 auto; background: var(--color-accent); color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Contact us</a>
       </div>
     </section>
   </div>
@@ -376,11 +388,11 @@
         <div style="margin-top: 14px; margin-left: calc(clamp(186px, 26vw, 240px) * 0.2613); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #9b9797;">Boulder, Colorado</div>
       </div>
       <nav style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #d7d3d3;">
-        <a href="#" onClick="{{ goHome }}">Home</a>
-        <a href="#" onClick="{{ goPlatform }}">Approach</a>
-        <a href="#" onClick="{{ goAbout }}">About</a>
-        <a href="#" onClick="{{ goNews }}">News</a>
-        <a href="#" onClick="{{ goContact }}">Contact</a>
+        <a href="/" onClick="{{ goHome }}">Home</a>
+        <a href="/approach" onClick="{{ goPlatform }}">Approach</a>
+        <a href="/about" onClick="{{ goAbout }}">About</a>
+        <a href="/news" onClick="{{ goNews }}">News</a>
+        <a href="/contact" onClick="{{ goContact }}">Contact</a>
       </nav>
     </div>
     <div style="max-width: 1320px; margin: clamp(28px, 5vh, 48px) auto 0; font-size: 12px; color: #7d7979;">© 2026 Yarra Biosystems. All rights reserved.</div>
@@ -389,12 +401,23 @@
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showMomentum&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showRoleSelector&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact form&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+// The view named "platform" is reached at /approach, so the slug and the
+// internal name are mapped rather than assumed to match.
+const PATH_TO_PAGE = { "": "home", "approach": "platform", "about": "about", "news": "news", "contact": "contact" };
+const PAGE_TO_PATH = { home: "/", platform: "/approach", about: "/about", news: "/news", contact: "/contact" };
+function slugOf(loc) { return (loc.pathname || "/").replace(/^\/+|\/+$/g, "").toLowerCase(); }
+function pageFromPath() { return PATH_TO_PAGE[slugOf(window.location)] || "home"; }
+
 class Component extends DCLogic {
-  state = { page: "home", sent: false };
+  state = { page: pageFromPath(), sent: false };
 
   go(page) {
     return (e) => {
+      // let the browser handle new-tab and middle clicks natively
+      if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1)) return;
       if (e) e.preventDefault();
+      const path = PAGE_TO_PATH[page] || "/";
+      if (window.location.pathname !== path) window.history.pushState({ page }, "", path);
       this.setState({ page }, () => window.scrollTo({ top: 0, behavior: "auto" }));
     };
   }
@@ -424,11 +447,20 @@ class Component extends DCLogic {
     });
   }
 
-  componentDidMount() { setTimeout(() => this.observe(), 60); }
+  componentDidMount() {
+    // an unrecognised path falls back to home, so make the address bar agree
+    if (!PATH_TO_PAGE[slugOf(window.location)]) window.history.replaceState({ page: "home" }, "", "/");
+    this.onPop = () => this.setState({ page: pageFromPath() });
+    window.addEventListener("popstate", this.onPop);
+    setTimeout(() => this.observe(), 60);
+  }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.page !== this.state.page) setTimeout(() => this.observe(), 60);
   }
-  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+  componentWillUnmount() {
+    if (this.onPop) window.removeEventListener("popstate", this.onPop);
+    if (this.io) this.io.disconnect();
+  }
 
   renderVals() {
     const page = this.state.page;
