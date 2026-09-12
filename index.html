@@ -37,12 +37,18 @@
   a { color: inherit; text-decoration: none; }
   a:hover { color: var(--color-accent-500); }
   ::selection { background: var(--color-accent-300); color: #201e1d; }
-  .yb-dark .input, .yb-dark select.input, .yb-dark textarea.input {
-    background: transparent; border: 0; border-bottom: 2px solid rgba(243,242,242,0.3);
-    color: #f3f2f2; font-family: var(--font-body); font-size: 17px; padding: 10px 0; width: 100%; border-radius: 0;
+  .yb-light .input, .yb-light select.input, .yb-light textarea.input {
+    background: transparent; border: 0; border-bottom: 2px solid rgba(32,30,29,0.5);
+    color: #201e1d; caret-color: #201e1d; font-family: var(--font-body); font-size: 17px; padding: 10px 0; width: 100%; border-radius: 0;
   }
-  .yb-dark .input:focus-visible { outline: none; border-bottom-color: var(--color-accent-500); }
-  .yb-dark .input::placeholder { color: #7d7979; }
+  .yb-light .input:hover { border-bottom-color: rgba(32,30,29,0.7); }
+  .yb-light .input:focus-visible { outline: none; border-bottom-color: #201e1d; }
+  .yb-light .input::placeholder { color: #7d7979; }
+  /* the global ring and link hover are off-white, which vanish on this ground */
+  .yb-light :focus-visible { outline-color: #201e1d; }
+  .yb-light a:hover { color: #201e1d; }
+  /* main stretches to fill tall screens; keep that space off-white under the contact view */
+  main:has(.yb-light) { background: #f3f2f2; }
   :focus-visible { outline: 2px solid var(--color-accent-500); outline-offset: 3px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
@@ -333,53 +339,55 @@
   </sc-if>
 
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
-  <div class="yb-dark">
-    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
+  <div class="yb-light">
+    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
       <div style="max-width: 1320px; margin: 0 auto;">
-        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Contact</span>
+        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">Contact</span>
         <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 15ch;">Let&rsquo;s Connect.</h1>
       </div>
     </section>
 
-    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
-      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 96px); border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(32px, 6vh, 64px);">
+    <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 96px); border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(32px, 6vh, 64px);">
         <div style="flex: 0 1 300px;">
-          <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.65; color: #d7d3d3; text-wrap: pretty;">We read every message and respond directly. Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
-          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #9b9797;">
+          <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.65; color: #444141; text-wrap: pretty;">We read every message and respond directly. Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #605d5d;">
             <span>Yarra Biosystems</span>
             <span>Boulder, Colorado</span>
+            <a href="mailto:hello@yarrabio.com" style="align-self: flex-start; margin-top: 6px; font-size: 16px; letter-spacing: 0.01em; text-transform: none; color: #201e1d; text-decoration: underline; text-underline-offset: 3px;">hello@yarrabio.com</a>
           </div>
-          <div style="margin-top: clamp(28px, 4.5vh, 40px); border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(20px, 3.2vh, 28px);">
-            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Follow</span>
-            <p style="margin: 10px 0 18px; font-size: 16px; line-height: 1.6; color: #d7d3d3; max-width: 34ch; text-wrap: pretty;">Company news and updates are posted to LinkedIn as they happen.</p>
-            <a href="https://www.linkedin.com/company/115914015/" target="_blank" rel="noopener noreferrer" aria-label="Yarra Biosystems on LinkedIn (opens in a new tab)" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 2px solid rgba(243,242,242,0.4); color: #f3f2f2; padding: 12px 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="border-color: #f3f2f2; background: rgba(243,242,242,0.08);"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false" style="flex: 0 0 auto;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg><span>LinkedIn</span></a>
+          <div style="margin-top: clamp(28px, 4.5vh, 40px); border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(20px, 3.2vh, 28px);">
+            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">Follow</span>
+            <p style="margin: 10px 0 18px; font-size: 16px; line-height: 1.6; color: #444141; max-width: 34ch; text-wrap: pretty;">Company news and updates are posted to LinkedIn as they happen.</p>
+            <a href="https://www.linkedin.com/company/115914015/" target="_blank" rel="noopener noreferrer" aria-label="Yarra Biosystems on LinkedIn (opens in a new tab)" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 2px solid rgba(32,30,29,0.55); color: #201e1d; padding: 12px 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="border-color: #201e1d; background: rgba(32,30,29,0.06); color: #201e1d;"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false" style="flex: 0 0 auto;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg><span>LinkedIn</span></a>
           </div>
         </div>
         <div style="flex: 1 1 460px; min-width: 0;">
           <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-            <div style="border: 2px solid var(--color-accent-500); padding: clamp(24px, 4vw, 40px);">
+            <div role="status" style="border: 2px solid #201e1d; padding: clamp(24px, 4vw, 40px);">
               <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; margin: 0 0 12px;">Message received.</h2>
-              <p style="margin: 0 0 20px; font-size: 17px; line-height: 1.6; color: #d7d3d3;">Thank you — we will be in touch shortly.</p>
-              <button type="button" onClick="{{ reset }}" style="background: transparent; border: 2px solid rgba(243,242,242,0.4); color: #f3f2f2; font-family: var(--font-body); padding: 12px 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="border-color: var(--color-accent-500); color: var(--color-accent-500);">Send another</button>
+              <p style="margin: 0 0 20px; font-size: 17px; line-height: 1.6; color: #444141;">Thank you — we will be in touch shortly.</p>
+              <button type="button" onClick="{{ reset }}" style="background: transparent; border: 2px solid rgba(32,30,29,0.55); color: #201e1d; font-family: var(--font-body); padding: 12px 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="border-color: #201e1d; background: rgba(32,30,29,0.06);">Send another</button>
             </div>
           </sc-if>
           <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
             <form onSubmit="{{ submit }}" style="display: grid; gap: 28px;">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0;">
               <label style="display: grid; gap: 8px;">
-                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Name</span>
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">Name</span>
                 <input class="input" type="text" name="name" required="required" placeholder="Full name">
               </label>
               <label style="display: grid; gap: 8px;">
-                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Email</span>
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">Email</span>
                 <input class="input" type="email" name="email" required="required" placeholder="you@organisation.com">
               </label>
               <label style="display: grid; gap: 8px;">
-                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Organization <span style="text-transform: none; letter-spacing: 0;">(optional)</span></span>
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">Organization <span style="text-transform: none; letter-spacing: 0;">(optional)</span></span>
                 <input class="input" type="text" name="organization" placeholder="Company, fund, or institution">
               </label>
               <sc-if value="{{ showRoleSelector }}" hint-placeholder-val="{{ false }}">
                 <label style="display: grid; gap: 8px;">
-                  <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">I am a…</span>
+                  <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">I am a…</span>
                   <select class="input" name="role">
                     <option value="investor">Investor</option>
                     <option value="partner">Strategic or industry partner</option>
@@ -389,10 +397,20 @@
                 </label>
               </sc-if>
               <label style="display: grid; gap: 8px;">
-                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9b9797;">Message</span>
+                <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #605d5d;">Message</span>
                 <textarea class="input" name="message" rows="5" required="required" placeholder="What would you like to discuss?" style="resize: vertical;"></textarea>
               </label>
-              <button type="submit" style="justify-self: start; background: var(--color-accent); color: #201e1d; border: 0; font-family: var(--font-body); padding: 16px 30px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="background: var(--color-accent-600);">Send message</button>
+              <sc-if value="{{ sendError }}" hint-placeholder-val="{{ false }}">
+                <div role="alert" style="border-left: 2px solid #201e1d; padding: 2px 0 2px 16px;">
+                  <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #201e1d; text-wrap: pretty;">Your message couldn&rsquo;t be sent from this page. Please email us at <a href="mailto:hello@yarrabio.com" onClick="{{ openMail }}" style="font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">hello@yarrabio.com</a> instead.</p>
+                </div>
+              </sc-if>
+              <sc-if value="{{ notSending }}" hint-placeholder-val="{{ true }}">
+                <button type="submit" style="justify-self: start; background: #201e1d; color: #f3f2f2; border: 0; font-family: var(--font-body); padding: 16px 30px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: pointer;" style-hover="background: #3a3636;">Send message</button>
+              </sc-if>
+              <sc-if value="{{ sending }}" hint-placeholder-val="{{ false }}">
+                <button type="button" disabled="disabled" style="justify-self: start; background: #3a3636; color: #f3f2f2; border: 0; font-family: var(--font-body); padding: 16px 30px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; cursor: progress;">Sending&hellip;</button>
+              </sc-if>
             </form>
           </sc-if>
         </div>
@@ -433,8 +451,14 @@ const PAGE_TO_PATH = { home: "/", platform: "/applications", science: "/science"
 function slugOf(loc) { return (loc.pathname || "/").replace(/^\/+|\/+$/g, "").toLowerCase(); }
 function pageFromPath() { return PATH_TO_PAGE[slugOf(window.location)] || "home"; }
 
+// Contact form messages are relayed to this inbox by FormSubmit (formsubmit.co).
+// The first submission triggers an activation email to the inbox, and nothing is
+// delivered until its "Activate Form" link is clicked.
+const CONTACT_INBOX = "hello@yarrabio.com";
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT_INBOX;
+
 class Component extends DCLogic {
-  state = { page: pageFromPath(), sent: false };
+  state = { page: pageFromPath(), sent: false, sending: false, sendError: false };
 
   go(page) {
     return (e) => {
@@ -487,6 +511,49 @@ class Component extends DCLogic {
     if (this.io) this.io.disconnect();
   }
 
+  async send(e) {
+    e.preventDefault();
+    if (this.state.sending) return;
+    const form = e.currentTarget || e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+    this.lastMessage = data;
+    // a filled honeypot means a bot; let it believe it succeeded
+    if (data._honey) { this.setState({ sent: true }); return; }
+    this.setState({ sending: true, sendError: false });
+    try {
+      const res = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          organization: data.organization || "",
+          role: data.role,
+          message: data.message,
+          _subject: "Website enquiry from " + (data.name || "yarrabio.com"),
+          _replyto: data.email,
+          _template: "table"
+        })
+      });
+      const body = await res.json().catch(() => ({}));
+      // an unactivated form still answers 200, with success "false", so the
+      // status code alone would report a message that was never delivered
+      if (!res.ok || String(body.success) !== "true") throw new Error(body.message || "HTTP " + res.status);
+      form.reset();
+      this.setState({ sending: false, sent: true });
+    } catch (err) {
+      console.warn("Contact form not delivered:", err);
+      this.setState({ sending: false, sendError: true });
+    }
+  }
+
+  mailtoHref() {
+    const d = this.lastMessage || {};
+    const signoff = [d.name, d.organization].filter(Boolean).join(", ");
+    const text = [d.message || "", "", signoff, d.email || ""].join("\n").trim();
+    return "mailto:" + CONTACT_INBOX + "?subject=" + encodeURIComponent("Website enquiry") + "&body=" + encodeURIComponent(text);
+  }
+
   renderVals() {
     const page = this.state.page;
     return {
@@ -506,8 +573,17 @@ class Component extends DCLogic {
       showRoleSelector: this.props.showRoleSelector ?? false,
       sent: this.state.sent,
       notSent: !this.state.sent,
-      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
-      reset: () => this.setState({ sent: false })
+      sending: this.state.sending,
+      notSending: !this.state.sending,
+      sendError: this.state.sendError,
+      submit: (e) => this.send(e),
+      // pre-fill the visitor's own mail client with what they already typed
+      openMail: (e) => {
+        if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1)) return;
+        if (e) e.preventDefault();
+        window.location.href = this.mailtoHref();
+      },
+      reset: () => this.setState({ sent: false, sendError: false })
     };
   }
 }

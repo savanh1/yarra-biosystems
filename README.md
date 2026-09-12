@@ -51,10 +51,15 @@ see the old version in your browser.
 
 ## Worth knowing
 
-- **The contact form doesn't send anything.** Submitting shows a thank-you
-  message, but there's no backend — nothing is emailed or stored. It needs a form
-  service (Formspree, Netlify Forms, or similar) wired up before it collects real
-  enquiries.
+- **The contact form relays through FormSubmit.** Submissions are POSTed to
+  formsubmit.co, which emails them to hello@yarrabio.com. **Nothing is delivered
+  until the form is activated:** the first submission sends an "Activate Form"
+  email to that inbox, and its link must be clicked. Until then, and whenever
+  FormSubmit is unreachable, visitors see an error pointing them to
+  hello@yarrabio.com — the thank-you panel only appears once delivery is
+  confirmed, so no message is dropped silently. After activation FormSubmit
+  offers a random alias; swapping it in for the address in `CONTACT_ENDPOINT`
+  keeps the inbox out of the form's endpoint.
 - **The views share one file.** /applications, /science, /about, /news and
   /contact are states of `index.html`, not separate files. They *are* linkable —
   `404.html` forwards the path — but GitHub Pages answers with HTTP 404 before the
