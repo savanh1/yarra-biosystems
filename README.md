@@ -12,7 +12,7 @@ redeploys the site automatically. No manual publish step.
 
 ```bash
 git add -A
-git commit -m "Update copy on the approach page"
+git commit -m "Update copy on the applications page"
 git push
 ```
 
@@ -39,7 +39,7 @@ see the old version in your browser.
 - **`.nojekyll` must stay.** Without it, GitHub Pages runs Jekyll, which
   silently deletes folders whose names start with an underscore. That would
   remove `_ds/` and the site would render with no styling at all.
-- **`404.html` must stay.** The site is one page; /news, /approach, /about
+- **`404.html` must stay.** The site is one page; /news, /applications, /about
   and /contact are views, not files. GitHub Pages has nothing to serve at those
   paths, so it falls back to `404.html`, which forwards the path to
   `index.html`. Delete it and every direct link breaks — only the bare domain
@@ -55,9 +55,12 @@ see the old version in your browser.
   message, but there's no backend — nothing is emailed or stored. It needs a form
   service (Formspree, Netlify Forms, or similar) wired up before it collects real
   enquiries.
-- **Home / Approach / Contact are not separate URLs.** They're one page swapping
-  content, so they can't be linked to directly, and search engines mostly see the
-  home page copy.
+- **The views share one file.** /applications, /science, /about, /news and
+  /contact are states of `index.html`, not separate files. They *are* linkable —
+  `404.html` forwards the path — but GitHub Pages answers with HTTP 404 before the
+  redirect runs, so crawlers may only index the home page copy.
+- **/approach still resolves.** The page was renamed to Applications; the old slug
+  is kept in `PATH_TO_PAGE` so older links don't break. /applications is canonical.
 - **React is loaded from unpkg.com at page load.** If that CDN is slow or blocked,
   visitors see a blank dark page. Worth hosting those two files in this repo if
   the site becomes business-critical.
