@@ -31,13 +31,19 @@ see the old version in your browser.
 | `uploads/` | Site images, including team portraits |
 | `logo.webp` | Brand wordmark, transparent background — used in the header and footer |
 | `favicon.svg` | Browser tab icon |
+| `404.html` | Required — see below |
 | `.nojekyll` | Required — see below |
 
-### Two things not to change without care
+### Three things not to change without care
 
 - **`.nojekyll` must stay.** Without it, GitHub Pages runs Jekyll, which
   silently deletes folders whose names start with an underscore. That would
   remove `_ds/` and the site would render with no styling at all.
+- **`404.html` must stay.** The site is one page; /news, /approach, /about
+  and /contact are views, not files. GitHub Pages has nothing to serve at those
+  paths, so it falls back to `404.html`, which forwards the path to
+  `index.html`. Delete it and every direct link breaks — only the bare domain
+  would work.
 - **`index.html` must keep that name.** GitHub Pages serves `index.html` as the
   page at the site root. This file was originally exported from Claude Design as
   `Yarra Biosystems Site.dc.html`; if you re-open it there for editing, rename it
