@@ -48,7 +48,7 @@
   .yb-light :focus-visible { outline-color: #201e1d; }
   .yb-light a:hover { color: #201e1d; }
   /* main stretches to fill tall screens; keep that space off-white under the contact view */
-  main:has(.yb-light) { background: #f3f2f2; }
+  main:has(.yb-light) { background: #ffffff; }
   :focus-visible { outline: 2px solid var(--color-accent-500); outline-offset: 3px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
@@ -174,7 +174,7 @@
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Collaboration</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(30px, 5.2vw, 72px); line-height: 1.02; letter-spacing: -0.03em; margin: 22px 0 0; max-width: 16ch; text-wrap: balance;">Talking with investors, partners, and collaborators.</h2>
         <p data-reveal="1" style="margin: clamp(26px, 4vh, 40px) 0 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; color: #f3f2f2; max-width: 56ch; text-wrap: pretty;">Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
-        <a href="/contact" onClick="{{ goContact }}" style="display: inline-block; margin-top: clamp(28px, 4.5vh, 44px); background: #f3f2f2; color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Get in touch</a>
+        <a href="/contact" onClick="{{ goContact }}" style="display: inline-block; margin-top: clamp(28px, 4.5vh, 44px); background: #ffffff; color: #201e1d; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #ffffff;">Get in touch</a>
       </div>
     </section>
   </div>
@@ -182,7 +182,7 @@
 
   <sc-if value="{{ isPlatform }}" hint-placeholder-val="{{ false }}">
   <div>
-    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
       <div style="max-width: 1320px; margin: 0 auto;">
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">Applications</span>
         <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 18ch;">Designed for translational oncology.</h1>
@@ -191,7 +191,7 @@
       </div>
     </section>
 
-    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
         <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 64px); padding: clamp(28px, 4vh, 44px) 0; border-top: 2px solid rgba(32,30,29,0.22);">
           <span style="flex: 0 0 120px; font-family: var(--font-heading); font-weight: 700; font-size: clamp(48px, 5.6vw, 72px); letter-spacing: 0.08em; color: var(--color-accent-700);">01</span>
@@ -228,7 +228,7 @@
 
     
 
-    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px;">
         <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 0; max-width: 18ch;">For a fuller picture, start a conversation.</h2>
         <a href="/contact" onClick="{{ goContact }}" style="flex: 0 0 auto; background: #201e1d; color: #f3f2f2; padding: 16px 28px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;" style-hover="background: #3a3636;">Contact us</a>
@@ -238,97 +238,97 @@
   </sc-if>
 
   <sc-if value="{{ isScience }}" hint-placeholder-val="{{ false }}">
-  <div>
-    <section style="background: linear-gradient(180deg, rgba(16,16,16,0.90) 0%, rgba(16,16,16,0.80) 45%, rgba(16,16,16,0.90) 100%) center/cover no-repeat, url('uploads/science-tissue.webp') center/cover no-repeat; color: #f3f2f2; padding: clamp(56px, 11vh, 132px) clamp(20px, 5vw, 64px);">
+  <div class="yb-light">
+    <section style="background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.96) 45%, rgba(255,255,255,0.96) 100%) center/cover no-repeat, url('uploads/science-tissue.webp') center/cover no-repeat; color: #201e1d; padding: clamp(56px, 11vh, 132px) clamp(20px, 5vw, 64px);">
       <div style="max-width: 1320px; margin: 0 auto;">
-        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">Science</span>
+        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">Science</span>
         <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 18ch; text-wrap: balance;">A More Complete Picture of Tissue Biology</h1>
-        <p data-reveal="1" style="margin: clamp(30px, 5vh, 48px) 0 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.65; color: #f3f2f2; max-width: 62ch; text-wrap: pretty;">By connecting protein biology, spatial context and disease state, we aim to uncover biological relationships that can lead to stronger targets, biomarkers and therapeutic strategies.</p>
+        <p data-reveal="1" style="margin: clamp(30px, 5vh, 48px) 0 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.65; color: #201e1d; max-width: 62ch; text-wrap: pretty;">By connecting protein biology, spatial context and disease state, we aim to uncover biological relationships that can lead to stronger targets, biomarkers and therapeutic strategies.</p>
       </div>
     </section>
 
-    <section style="padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
       <div style="max-width: 1320px; margin: 0 auto;">
-        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">The problem</span>
+        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">The problem</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 20ch; text-wrap: balance;">Most ways of reading tissue give something up.</h2>
-        <p style="margin: clamp(26px, 4vh, 36px) 0 0; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; max-width: 64ch; color: #d7d3d3; text-wrap: pretty;">Every established method answers part of the question well, and discards another part along the way.</p>
+        <p style="margin: clamp(26px, 4vh, 36px) 0 0; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; max-width: 64ch; color: #444141; text-wrap: pretty;">Every established method answers part of the question well, and discards another part along the way.</p>
         <div style="display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 40px); margin-top: clamp(32px, 5vh, 56px);">
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Averaging</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Bulk measurements report many cells at once. A small population behaving differently disappears into the mean.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Bulk measurements report many cells at once. A small population behaving differently disappears into the mean.</p>
           </div>
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Dissociation</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Breaking tissue into single cells recovers detail about each one, but gives up where it sat and what it sat beside.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Breaking tissue into single cells recovers detail about each one, but gives up where it sat and what it sat beside.</p>
           </div>
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Panels answer their own question</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">A panel reports on the markers it was designed around. What was left off it stays invisible, however many channels it carries.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">A panel reports on the markers it was designed around. What was left off it stays invisible, however many channels it carries.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
-      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(36px, 6vh, 72px);">
-        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">What we connect</span>
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(36px, 6vh, 72px);">
+        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">What we connect</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 20ch; text-wrap: balance;">Three readings of the same tissue.</h2>
         <div style="display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 40px); margin-top: clamp(32px, 5vh, 56px);">
           <div data-reveal="1" style="flex: 1 1 240px; min-width: 0;">
-            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #9b9797;">01</span>
+            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #605d5d;">01</span>
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 10px 0 10px;">Protein biology</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Which proteins are present and in what amount &mdash; the molecules that carry out the work, rather than a proxy for it.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Which proteins are present and in what amount &mdash; the molecules that carry out the work, rather than a proxy for it.</p>
           </div>
           <div data-reveal="1" style="flex: 1 1 240px; min-width: 0;">
-            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #9b9797;">02</span>
+            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #605d5d;">02</span>
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 10px 0 10px;">Spatial context</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Where those signals sit, and which cells are neighbors. Tumor, immune and stromal cells influence one another continuously.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Where those signals sit, and which cells are neighbors. Tumor, immune and stromal cells influence one another continuously.</p>
           </div>
           <div data-reveal="1" style="flex: 1 1 240px; min-width: 0;">
-            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #9b9797;">03</span>
+            <span style="display: block; font-size: 13px; letter-spacing: 0.14em; color: #605d5d;">03</span>
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 10px 0 10px;">Disease state</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Not only which cells are present, but the state they are in and how they respond.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Not only which cells are present, but the state they are in and how they respond.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
-      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(36px, 6vh, 72px);">
-        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500);">How we work</span>
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(36px, 6vh, 72px);">
+        <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">How we work</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 20ch; text-wrap: balance;">What we hold to.</h2>
         <div style="display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 40px); margin-top: clamp(32px, 5vh, 56px);">
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Keep the tissue intact</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Measurements are made without taking the sample apart, so spatial relationships survive the experiment.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Measurements are made without taking the sample apart, so spatial relationships survive the experiment.</p>
           </div>
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Stay close to standard practice</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Working with the material and handling pathology already uses keeps results interpretable to the people who read tissue today.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Working with the material and handling pathology already uses keeps results interpretable to the people who read tissue today.</p>
           </div>
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Measure proteins, not proxies</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">Protein-level measurement reports what cells are doing, rather than what they may be preparing to do.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">Protein-level measurement reports what cells are doing, rather than what they may be preparing to do.</p>
           </div>
-          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(243,242,242,0.25); padding-top: 16px;">
+          <div data-reveal="1" style="flex: 1 1 240px; min-width: 0; border-top: 2px solid rgba(32,30,29,0.22); padding-top: 16px;">
             <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.22; letter-spacing: -0.015em; margin: 0 0 10px;">Keep the output legible</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d7d3d3;">An analysis layer is only useful if the people reading it can reason about what it says.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #444141;">An analysis layer is only useful if the people reading it can reason about what it says.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
-      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(243,242,242,0.25); padding-top: clamp(36px, 6vh, 72px); display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+      <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(36px, 6vh, 72px); display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
         <div style="flex: 0 0 200px;">
-          <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-500); font-weight: 600;">Foundations</span>
+          <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 600;">Foundations</span>
         </div>
         <div style="flex: 1 1 520px; min-width: 0;" data-reveal="1">
           <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 28px; max-width: 20ch;">Grounded in published work.</h2>
           <p style="margin: 0 0 20px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; max-width: 64ch; text-wrap: pretty;">The science draws on two bodies of work already in the public record: translational histopathology and spatial biology, and cellular imaging and mechanobiology research at the University of Colorado Boulder, where cofounder Corey Neu holds the Donnelly Family Endowed Professorship.</p>
           <div style="display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 32px);">
-            <a href="/about" onClick="{{ goAbout }}" style="display: inline-block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid rgba(243,242,242,0.6); padding-bottom: 4px;">Meet the team</a>
-            <a href="https://www.colorado.edu/mechanical/corey-neu" target="_blank" rel="noopener noreferrer" aria-label="Corey Neu at CU Boulder (opens in a new tab)" style="display: inline-block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid rgba(243,242,242,0.6); padding-bottom: 4px;">Corey Neu at CU Boulder</a>
+            <a href="/about" onClick="{{ goAbout }}" style="display: inline-block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid rgba(32,30,29,0.55); padding-bottom: 4px;">Meet the team</a>
+            <a href="https://www.colorado.edu/mechanical/corey-neu" target="_blank" rel="noopener noreferrer" aria-label="Corey Neu at CU Boulder (opens in a new tab)" style="display: inline-block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; border-bottom: 2px solid rgba(32,30,29,0.55); padding-bottom: 4px;">Corey Neu at CU Boulder</a>
           </div>
         </div>
       </div>
@@ -337,8 +337,8 @@
   </sc-if>
 
   <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
-  <div>
-    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
+  <div class="yb-light">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(36px, 7vh, 80px);">
       <div style="max-width: 1320px; margin: 0 auto;">
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">About</span>
         <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 18ch;">Where pathology meets engineering.</h1>
@@ -347,7 +347,7 @@
       </div>
     </section>
 
-    <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(40px, 7vh, 80px);">
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(40px, 7vh, 80px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(36px, 5vw, 80px); border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(36px, 6vh, 72px);">
         <div data-reveal="1" style="flex: 1 1 360px; min-width: 0;">
           <div style="width: 100%; max-width: 340px; aspect-ratio: 4 / 5; position: relative;">
@@ -370,7 +370,7 @@
       </div>
     </section>
 
-    <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
       <div style="max-width: 1320px; margin: 0 auto; border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(36px, 6vh, 72px);">
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">Why Yarra Biosystems?</span>
         <h2 data-reveal="1" style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.028em; margin: 22px 0 0; max-width: 18ch; text-wrap: balance;">Named for where the journey began.</h2>
@@ -414,14 +414,14 @@
 
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
   <div class="yb-light">
-    <section style="background: #f3f2f2; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
+    <section style="background: #ffffff; color: #201e1d; padding: clamp(48px, 9vh, 112px) clamp(20px, 5vw, 64px) clamp(40px, 8vh, 88px);">
       <div style="max-width: 1320px; margin: 0 auto;">
         <span style="font-size: clamp(16px, 5.1vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700);">Contact</span>
         <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(34px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -0.032em; margin: 22px 0 0; max-width: 15ch;">Let&rsquo;s Connect.</h1>
       </div>
     </section>
 
-    <section style="background: #f3f2f2; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
+    <section style="background: #ffffff; color: #201e1d; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 11vh, 128px);">
       <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 96px); border-top: 2px solid rgba(32,30,29,0.22); padding-top: clamp(32px, 6vh, 64px);">
         <div style="flex: 0 1 300px;">
           <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.65; color: #444141; text-wrap: pretty;">We read every message and respond directly. Investors, strategic partners, academic and technical collaborators, and prospective advisors are all welcome.</p>
